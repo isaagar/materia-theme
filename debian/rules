@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_install:
+	sed  s,destdir\:\-\},repodir\}\/debian\/materia\-theme,g -i install.sh
+	./install.sh
+
+override_dh_auto_clean:
+	sed  s,repodir\}\/debian\/materia\-theme,destdir\:\-\},g -i install.sh
+
