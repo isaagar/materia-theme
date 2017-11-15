@@ -2,14 +2,14 @@ Source: materia-theme
 Section: gnome
 Priority: optional
 Maintainer: I Sagar <i.vikram15@gmail.com>
-Build-Depends: debhelper (>= 9)
+Build-Depends: debhelper (>= 9) , libglib2.0-dev
 Standards-Version: 3.9.8
 Homepage: https://github.com/nana-4/materia-theme
 Vcs-Git: https://github.com/nana-4/materia-theme.git
 
 Package: materia-theme
 Architecture: all
-Depends: gnome-themes-standard, gtk2-engines-murrine, libglib2.0-dev , ${misc:Depends}
+Depends: gnome-themes-standard, gtk2-engines-murrine, ${misc:Depends}
 Description: Materia (formerly Flat-Plat) is a Material Design theme 
  for GNOME/GTK+ based desktop environments.
  It supports GTK+ 3, GTK+ 2, GNOME Shell, Budgie, MATE, Unity, LightDM, GDM, Chrome theme, etc.
