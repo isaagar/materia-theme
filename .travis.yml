@@ -11,7 +11,7 @@ branches:
   except:
     - /^debian\/\d/
 
- before_deploy:
+before_deploy:
       # Set up git user name and tag this commit
       - git config --local user.name "I Sagar"
       - git config --local user.email "i.vikram15@gmail.com"
