@@ -10,3 +10,12 @@ script:
 branches:
   except:
     - /^debian\/\d/
+
+deploy:
+  provider: releases
+  api_key: "aEqEONeHDLpXGqCuxA/sMZAFLRo1KzRZl1rjOmHO0C9KHzk26YxNe5fh3j2eW09eZSme+J5cFhdLv0RDTOLkmJuAXuQGbcX2oNm3D7FKwuiv4DdVqvQ2XJCy3TvM96DEZE+Q2GfAfdr8H3skADCe3o2NOepeL6/Vde8hbpXDxHIOjUUg21wtzoJpmowXp68C6xkqGhEDGwx/pA3FTNQFMVK5Z4QAy5MH2/UdtNaAjcdphQd0AI38WGqVTLbuBotWba7DhnYY3Vvt1eW14iDqbmwhAf8NSQkr/0Q/8Vq56cHVDJG31JKE3VnSQR9DF+WPnZxOyWsxLdJ5X2wD964Q9FJVNF+kmZfhCjp82TdLG+He8O5eC3AtX6YrzZEDyVibRJaeFRqLwVhBfCLZwwaV4JISZFuybkQ75P8VG+8TTqKtYhHOGDS7YhQSn9gSOXt4/wKIFtcgMlDgDgKYK1uqTPSzxnWjnfW8z5kDu3ELTdYefsvr7bdDPtHJJzTGUgdUkC3KywnkAXsaJlfuRgqfFIYZ8UvBSk0MZnAuiaCvyuIPD2BS9+4lbjJlmUXT7EYiIxFxB6pLnA86yDCz38lTd0ZAjMUWXFOodtQC1qpBtO3lWt8vBPJhvPSW2qewDQIgGZ9SQfGwZh7ykhsc0NRLTY7teTXvHZ49bw1CbWiRDm4="
+  file_glob: true
+  file: ../*.deb
+  skip_cleanup: true
+  on:
+    tags: true
